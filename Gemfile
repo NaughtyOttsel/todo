@@ -8,7 +8,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.2.0'
 
 gem 'engineyard', '~> 3.2.1'
-
+gem 'crass', '1.0.3'
 
 gem 'ey_config'
 gem 'rails_autolink'
