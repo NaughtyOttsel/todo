@@ -16,7 +16,7 @@ gem 'elastic-apm'
 
 gem 'engineyard', '~> 3.2.1'
 gem 'crass', '1.0.3'
-
+gem 'concurrent-ruby', '1.1.5'
 gem 'ey_config'
 gem 'rails_autolink'
 gem 'simple_form', '~> 3.1.0'
