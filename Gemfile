@@ -7,6 +7,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2.0'
 
+
+gem 'lograge'
+gem 'logstash-event'
+gem 'logstash-logger'
+gem 'elastic-apm'
+
+
 gem 'engineyard', '~> 3.2.1'
 gem 'crass', '1.0.3'
 
