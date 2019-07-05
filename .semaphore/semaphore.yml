@@ -1,18 +1,22 @@
-# For more Ruby information and examples, see
-# https://docs.semaphoreci.com/article/73-ruby
 version: v1.0
-name: Hello Semaphore
+name: Deploy website
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Ruby example
+  - name: "Install dependencies"
     task:
       jobs:
-        - name: Run some code
+      - name: install ey-core
+        commands:
+          - gem install ey-core
+  - name: Deploy
+    task:
+      secrets:
+        - name: EngineYard-CLI
+      jobs:
+        - name: deploy
           commands:
-            - ruby -e 'puts "evol".reverse'
-            # Uncomment the following line to pull your code,
-            # then proceed by adding your custom commands:
-            #- checkout
+            - checkout
+            - ey-core deploy --environment V6_Testing_Waz --account EY-Dedicated-Internal
