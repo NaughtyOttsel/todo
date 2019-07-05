@@ -13,5 +13,4 @@ blocks:
         - name: deploy
           commands:
             - gem install ey-core
-            - checkout
             - ey-core deploy --environment V6_Testing_Waz --account EY-Dedicated-Internal
