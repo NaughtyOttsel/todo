@@ -5,12 +5,6 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: "Install dependencies"
-    task:
-      jobs:
-      - name: install ey-core
-        commands:
-          - gem install ey-core
   - name: Deploy
     task:
       secrets:
@@ -18,5 +12,6 @@ blocks:
       jobs:
         - name: deploy
           commands:
+            - gem install ey-core
             - checkout
             - ey-core deploy --environment V6_Testing_Waz --account EY-Dedicated-Internal
